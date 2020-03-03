@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>De for-lus</title>
+  </head>
+  <body>
+    <script>
+      for (x = 0; x < 3; x++) {
+        document.write("<br>Dit is lus: " + x);
+      }
+      var student = new Array(
+        "Zakaria",
+        "Albert",
+        "Hamsa",
+        "Mike",
+        "Pieter",
+        "Harry"
+      );
+      for (x = 0; x < 5; x += 2) {
+        document.write("<br>Element " + x + " is " + student[x]);
+      }
+
+      var tekst = "<br>Hij lijkt een beetje op Nelson Mandela";
+
+      lengte = tekst.length;
+
+      document.write("<br>");
+      var i = 0;
+      var a = 0;
+      var e = 0;
+      var o = 0;
+      var u = 0;
+
+      for (x = 0; x < lengte; x++) {
+        document.write(tekst[x]);
+        if (tekst[x] == "a") {
+          a++;
+        } else if (tekst[x] == "e") {
+          e++;
+        } else if (tekst[x] == "o") {
+          o++;
+        } else if (tekst[x] == "u") {
+          u++;
+        } else if (tekst[x] == "i") {
+          i++;
+        }
+      }
+
+      document.write("<br>Aantal a's: " + a);
+      document.write("<br>Aantal e's: " + e);
+      document.write("<br>Aantal o's: " + o);
+      document.write("<br>Aantal u's: " + u);
+      document.write("<br>Aantal i's: " + i);
+
+      var getal = new Array();
+      getal[0] = "nul";
+      getal[1] = "een";
+      getal[2] = "twee";
+      getal[3] = "drie";
+      getal[4] = "vier";
+      getal[5] = "vijf";
+      getal[6] = "zes";
+      getal[7] = "zeven";
+      getal[8] = "acht";
+      getal[9] = "negen";
+
+      var input = prompt("Wat is je telefoon nummer?");
+      var output = "";
+      for (i = 0; i < input.length; i++) {
+        output += getal[input[i]] + " ";
+      }
+      document.write("<br>Je telefoon nummer is: " + output);
+    </script>
+  </body>
+</html>

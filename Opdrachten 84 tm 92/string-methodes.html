@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string-methodes</title>
+</head>
+<body>
+    <script>
+        var titel = 'Javascript';
+        var string = 'dit is een lange tekst met daarin het woord javascript';
+        var spiegeling = ' ';
+        var tekst = 'Dit is een lange tekst met daarin het woord javascript';
+        
+        document.write('Index van letter s is: ' + titel.indexOf('s'));
+        document.write('<br>Positie van het woord javascript is: ' + string.indexOf('javascript'));
+        document.write('<br>Positie van het woord HTML is: ' + string.indexOf('HTML'));
+       
+        if (navigator.userAgent.indexOf('MSIE') != -1) {
+            document.write('<br>Browser is Internet Explorer');
+        } else if (navigator.userAgent.indexOf('Firefox', 0) != -1){
+            document.write('<br>Browser is Firefox');
+        } else if (navigator.userAgent.indexOf('Chrome') != -1) {
+            document.write('<br>Browser is Google Chrome');
+        }
+        //document.write('<br>De lengte van titel is: ' + titel.length)
+
+        for (x = 0; x < titel.length; x++) {
+            teken = titel.charAt(x);
+            spiegeling = teken + spiegeling;
+        }
+        document.write('<br>Javascript gespiegeld is: ' + spiegeling);
+        
+        splitsing = tekst.split(' ');
+        document.write('<br>De resulterende array is: ' + splitsing);
+
+        string = string.substr(0, string.indexOf('javascript')) + string.substr( string.indexOf('javascript') +10, string.length);
+        document.write('<br>String is nu: ' + string);
+
+        var cursus = prompt('Kies een van de volgende ' + 'cursussen HTML of Javascript');
+        if (cursus.toLocaleLowerCase() == 'html' || cursus.toLocaleLowerCase() == 'javascript') {
+            document.write('<br>Je hebt: ' + cursus.toUpperCase() + ' gekozen.');
+        } else {
+            document.write('<br>Kies een geldige cursus');
+        }
+   </script>
+</body>
+</html>
